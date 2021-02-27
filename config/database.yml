@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: laboratory_production
-  username: laboratory
-  password: <%= ENV['LABORATORY_DATABASE_PASSWORD'] %>
+  username: root
+  password: 
+  socket: /var/run/mysqld/mysqld.sock
