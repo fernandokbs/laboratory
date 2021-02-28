@@ -780,18 +780,10 @@
       <%= yield %>
     </div>
 
-
-    <%= javascript_include_tag '/assets/plugins/jquery/jquery.min.js' %>
-    <%= javascript_include_tag '/assets/plugins/jquery-ui/jquery-ui.min.js' %>
     <% content_for :javascript do %>
       <script type='test/javascript'>
         $.widget.bridge('uibutton', $.ui.button)
        </script>
     <% end %>
-
-    <%= javascript_include_tag '/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %>
-    <%= javascript_include_tag '/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js' %>
-    <%= javascript_include_tag '/assets/dist/js/adminlte.js' %>
-    <%= javascript_include_tag '/assets/dist/js/demo.js' %>
   </body>
 </html>
