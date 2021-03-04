@@ -19,6 +19,5 @@
 //= require popper
 //= require bootstrap-sprockets
 
-//= require pluggins/jquery/jquery-ui.min.js
 //= require pluggins/jquery/jquery.overlayScrollbars.min.js
 //= require pluggins/jquery/adminlte.js
