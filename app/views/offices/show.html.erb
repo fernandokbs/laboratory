@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-sm-5">
+    <div class="card mt-5">
+      <div class="card-body">
+        <p>
+          <strong>Name:</strong>
+          <%= @office.name %>
+        </p>
+    
+        <p>
+          <strong>Direction:</strong>
+          <%= @office.direction %>
+        </p>
+    
+        <p>
+          <strong>Phone:</strong>
+          <%= @office.phone %>
+        </p>
+    
+        <p>
+          <strong>City:</strong>
+          <%= @office.city %>
+        </p>
+    
+        <p>
+          <strong>Manager:</strong>
+          <%= @office.manager %>
+        </p>
+    
+        <p>
+          <strong>Position:</strong>
+          <%= @office.position %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5">
+  <%= link_to 'Editar', edit_office_path(@office), class: 'btn btn-primary' %>
+  <%= link_to 'Atras', offices_path, class: 'btn btn-success' %>
+</div>

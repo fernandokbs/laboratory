@@ -1,0 +1,88 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-sm-7">
+    <%= form_with(model: office, local: true) do |form| %>
+      <% if office.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(office.errors.count, "error") %> prohibited this office from being saved:</h2>
+    
+          <ul>
+          <% office.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    
+      <div class="row justify-content-center mb-2">
+        <div class="col-sm-3 text-center">
+          <%= form.label :nombre, class: 'col-form-label' %>
+        </div>
+        <div class="col-sm-6">
+          <%= form.text_field :name, class: 'form-control' %>
+        </div>
+      </div>
+    
+      <div class="row justify-content-center mb-2">
+        <div class="col-sm-3 text-center">
+          <%= form.label :dirección, class: 'col-form-label' %>
+        </div>
+
+        <div class="col-sm-6">
+          <%= form.text_area :direction, class: 'form-control' %>
+        </div>
+      </div>
+    
+      <div class="row justify-content-center mb-2">
+        <div class="col-sm-3 text-center">
+          <%= form.label :teléfono, class: 'col-form-label' %>
+        </div>
+
+        <div class="col-sm-6">
+          <%= form.text_field :phone, class: 'form-control' %>
+        </div>
+      </div>
+    
+      <div class="row justify-content-center mb-2">
+        <div class="col-sm-3 text-center">
+          <%= form.label :ciudad, class: 'col-form-label' %>
+        </div>
+        <div class="col-sm-6">
+          <%= form.text_field :city, class: 'form-control' %>
+        </div>
+      </div>
+    
+      <div class="row justify-content-center mb-2">
+        <div class="col-sm-3 text-center">
+          <%= form.label :responsable, class: 'col-form-label' %>
+        </div>
+
+        <div class="col-sm-6">
+          <%= form.text_field :manager, class: 'form-control' %>
+        </div>
+      </div>
+    
+      <div class="row justify-content-center mb-2">
+        <div class="col-sm-3 text-center">
+          <%= form.label :cargo, class: 'col-form-label' %>
+        </div>
+
+        <div class="col-sm-6">
+          <%= form.text_field :position, class:'form-control' %>
+        </div>
+      </div>
+    
+      <% if false %>
+        <div class="field">
+          <%= form.label :signature %>
+          <%= form.text_field :signature %>
+        </div>
+      <%end%>
+    
+      <div class="row justify-content-center mt-5">
+        <div class="col-sm-5">
+          <%= form.submit class: 'btn btn-primary btn-block' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
