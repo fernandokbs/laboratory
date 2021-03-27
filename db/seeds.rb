@@ -16,10 +16,18 @@ if Role.count == 0
 end
 
 if Servicetype.count == 0
-    Servicetype.create(:name => "Muestra de Organos")
-    Servicetype.create(:name => "Citologia Ginecologica")
+    Servicetype.create(:name => "Patologia")
+    Servicetype.create(:name => "Citologia")
+    Servicetype.create(:name => "Citologia")
     Servicetype.create(:name => "PCR")
-    Servicetype.create(:name => "Inmuno")
-    Servicetype.create(:name => "Base Liquida")
-    Servicetype.create(:name => "Citologia No Ginecologica")
+    Servicetype.create(:name => "InmunoHistoquimica")
+end
+
+if SampleType.count == 0
+    SampleType.create(:name => "Muestra de Organos")
+    SampleType.create(:name => "Citologia Ginecologica")
+    SampleType.create(:name => "PCR")
+    SampleType.create(:name => "Inmuno")
+    SampleType.create(:name => "Base Liquida")
+    SampleType.create(:name => "Citologia No Ginecologica")
 end
