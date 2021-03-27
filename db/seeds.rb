@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+if Role.count == 0
+    Role.create(:name => "Administrador")
+    Role.create(:name => "SubAdministrador")
+    Role.create(:name => "Caja")
+    Role.create(:name => "Seguimiento")
+    Role.create(:name => "Socio")
+    Role.create(:name => "Control de Caja")
+end

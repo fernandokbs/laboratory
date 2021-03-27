@@ -19,8 +19,14 @@ ActiveRecord::Schema.define(version: 2021_03_06_161755) do
     t.string "city"
     t.string "manager"
     t.string "position"
-    t.boolean "status"
+    t.boolean "status", default: true
     t.string "signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_03_06_161755) do
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.integer "user_type", default: 1
+    t.bigint "role_id", default: 1
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -38,6 +45,7 @@ ActiveRecord::Schema.define(version: 2021_03_06_161755) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 

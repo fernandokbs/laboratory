@@ -1,0 +1,19 @@
+<h1 class="text-center mt-2">Roles activos</h1>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr class="text-center">
+        <th>Nombre</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @roles.each do |role| %>
+        <tr class="text-center">
+          <td><%= role.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
