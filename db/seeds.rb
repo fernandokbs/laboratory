@@ -14,3 +14,12 @@ if Role.count == 0
     Role.create(:name => "Socio")
     Role.create(:name => "Control de Caja")
 end
+
+if Servicetype.count == 0
+    Servicetype.create(:name => "Muestra de Organos")
+    Servicetype.create(:name => "Citologia Ginecologica")
+    Servicetype.create(:name => "PCR")
+    Servicetype.create(:name => "Inmuno")
+    Servicetype.create(:name => "Base Liquida")
+    Servicetype.create(:name => "Citologia No Ginecologica")
+end
