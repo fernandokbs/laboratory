@@ -1,0 +1,32 @@
+<%= form_with(model: method_type, local: true) do |form| %>
+  <% if method_type.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(method_type.errors.count, "error") %> prohibited this method_type from being saved:</h2>
+
+      <ul>
+      <% method_type.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :macroscopy %>
+    <%= form.text_area :macroscopy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :diagnosis %>
+    <%= form.text_area :diagnosis %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class MethodType < ApplicationRecord
+end

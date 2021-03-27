@@ -15,6 +15,14 @@ if Role.count == 0
     Role.create(:name => "Control de Caja")
 end
 
+if PcrType.count == 0
+    PcrType.create(:name => "HPV59 (alto riesgo).")
+    PcrType.create(:name => "HPV54 (bajo riesgo).")
+    PcrType.create(:name => "HPV42 (BAJO RIESGO).")
+    PcrType.create(:name => "HPV53 (bajo riesgo), HPV52 (alto riesgo), HPV70 (bajo riesgo).")
+    PcrType.create(:name => "HPV56 (alto riesgo).")
+end
+
 if Servicetype.count == 0
     Servicetype.create(:name => "Patologia")
     Servicetype.create(:name => "Citologia")
@@ -32,10 +40,12 @@ if SampleType.count == 0
     SampleType.create(:name => "Citologia No Ginecologica")
 end
 
-if PcrType.count == 0
-    PcrType.create(:name => "HPV59 (alto riesgo).")
-    PcrType.create(:name => "HPV54 (bajo riesgo).")
-    PcrType.create(:name => "HPV42 (BAJO RIESGO).")
-    PcrType.create(:name => "HPV53 (bajo riesgo), HPV52 (alto riesgo), HPV70 (bajo riesgo).")
-    PcrType.create(:name => "HPV56 (alto riesgo).")
+if SaleType.count == 0
+    SaleType.create(:name => "EFECTIVO")
+    SaleType.create(:name => "CHEQUE")
+    SaleType.create(:name => "ELECTRONICO")
+end
+
+if MethodType.count == 0
+    
 end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  macroscopy: MyText
+  diagnosis: MyText
+
+two:
+  description: MyString
+  macroscopy: MyText
+  diagnosis: MyText

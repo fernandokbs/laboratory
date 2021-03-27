@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @method_type.description %>
+</p>
+
+<p>
+  <strong>Macroscopy:</strong>
+  <%= @method_type.macroscopy %>
+</p>
+
+<p>
+  <strong>Diagnosis:</strong>
+  <%= @method_type.diagnosis %>
+</p>
+
+<%= link_to 'Edit', edit_method_type_path(@method_type) %> |
+<%= link_to 'Back', method_types_path %>
