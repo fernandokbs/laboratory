@@ -1,0 +1,2 @@
+class PcrType < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pcr Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pcr_types.each do |pcr_type| %>
+      <tr>
+        <td><%= pcr_type.name %></td>
+        <td><%= link_to 'Show', pcr_type %></td>
+        <td><%= link_to 'Edit', edit_pcr_type_path(pcr_type) %></td>
+        <td><%= link_to 'Destroy', pcr_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pcr Type', new_pcr_type_path %>
