@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tabulators
   resources :type_services
   resources :classifications
   resources :organs

@@ -1,0 +1,2 @@
+class Tabulator < ApplicationRecord
+end

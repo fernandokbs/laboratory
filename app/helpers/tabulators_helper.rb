@@ -1,0 +1,2 @@
+module TabulatorsHelper
+end
