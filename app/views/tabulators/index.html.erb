@@ -1,27 +1,26 @@
-<p id="notice"><%= notice %></p>
+<h1 class="text-center mt-5">Tabuladores</h1>
 
-<h1>Tabulators</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tabulators.each do |tabulator| %>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= tabulator.name %></td>
-        <td><%= link_to 'Show', tabulator %></td>
-        <td><%= link_to 'Edit', edit_tabulator_path(tabulator) %></td>
-        <td><%= link_to 'Destroy', tabulator, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @tabulators.each do |tabulator| %>
+        <tr>
+          <td><%= tabulator.name %></td>
+          <td><%= link_to 'Mostar', tabulator, :class => 'btn' %></td>
+          <td><%= link_to 'Editar', edit_tabulator_path(tabulator), :class => 'btn' %></td>
+          <td><%= link_to 'Eliminar', tabulator, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 
 <%= link_to 'New Tabulator', new_tabulator_path %>

@@ -1,9 +1,47 @@
-<p id="notice"><%= notice %></p>
+<h2 class="text-center mt-5 mb-2">Configuración del Tabulador</h2>
 
-<p>
-  <strong>Name:</strong>
-  <%= @tabulator.name %>
-</p>
+<div class="text-right mb-2">
+  <%= link_to "Agregar nuevo servicio" ,new_tabulator_service_path(@tabulator), :class => 'btn btn-primary' %>
+</div>
 
-<%= link_to 'Edit', edit_tabulator_path(@tabulator) %> |
-<%= link_to 'Back', tabulators_path %>
+<div class="card">
+  <div class="card-body">
+    <p>
+      <strong>Name:</strong>
+      <%= @tabulator.name %>
+    </p>
+    <div>
+      <div class="table-responsive">
+        <table class="table table-bordered text-center">
+          <thead>
+            <th>Organo</th>
+            <th>Servicio</th>
+            <th>Clasificación</th>
+            <th>Precio</th>
+            <th col="colspan">Opciones</th>
+          </thead>
+          <tbody>
+            <% @tabulator.services.each do |item| %>
+                <tr>
+                  <td><%= item.organ.name %></td>
+                  <td><%= item.classification.name %></td>
+                  <td><%= item.type_service.name %></td>
+                  <td>$<%= item.amount %></td>
+                  <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                      <button type="button" class="btn btn-primary">Editar</button>
+                      <button type="button" class="btn btn-secondary">Eliminar</button>
+                    </div>
+                  </td>
+                </tr>
+              <%end%>
+          </tbody>
+        </table>      
+      </div>
+    </div>
+  </div>
+</div>
+
+<div>
+  <%= link_to 'Regresar', tabulators_path, :class => 'btn btn-primary' %>
+</div>

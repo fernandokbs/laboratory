@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :services
-  resources :tabulators
+  resources :services, :path => :servicios
+
+  resources :tabulators, :path => :tabuladores do
+    resources :services, only: [:index, :create, :new]
+  end
+
   resources :type_services
   resources :classifications
   resources :organs

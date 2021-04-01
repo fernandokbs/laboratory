@@ -1,5 +1,6 @@
 class ServicesController < ApplicationController
   before_action :set_service, only: %i[ show edit update destroy ]
+  before_action :set_tabulator, only: [:new, :create]
 
   # GET /services or /services.json
   def index
@@ -12,6 +13,9 @@ class ServicesController < ApplicationController
 
   # GET /services/new
   def new
+    @organs = Organ.all
+    @classificationes = Classification.all
+    @type_services = TypeService.all
     @service = Service.new
   end
 
@@ -25,7 +29,7 @@ class ServicesController < ApplicationController
 
     respond_to do |format|
       if @service.save
-        format.html { redirect_to @service, notice: "Service was successfully created." }
+        format.html { redirect_to @tabulator, notice: "Service was successfully created." }
         format.json { render :show, status: :created, location: @service }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -60,6 +64,10 @@ class ServicesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_service
       @service = Service.find(params[:id])
+    end
+
+    def set_tabulator
+      @tabulator = Tabulator.find(params[:tabulator_id])
     end
 
     # Only allow a list of trusted parameters through.

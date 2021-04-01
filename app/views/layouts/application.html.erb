@@ -178,13 +178,13 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="pages/widgets.html" class="nav-link">
+            <%= link_to root_path, :class => 'nav-link' do %>
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Widgets
+                Tabuladores
                 <span class="right badge badge-danger">New</span>
               </p>
-            </a>
+            <%end%>
           </li>
           
           <li class="nav-item">
@@ -371,13 +371,9 @@
           <%= yield %>
         </div>
       </div>
-      <div class="tab-loading">
-        <div>
-          <h2 class="display-4">Tab is loading <i class="fa fa-sync fa-spin"></i></h2>
-        </div>
-      </div>
     </div>
   </div>
+  
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="/">UPACH</a>.</strong>

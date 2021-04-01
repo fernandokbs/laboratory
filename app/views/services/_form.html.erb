@@ -1,4 +1,4 @@
-<%= form_with(model: service, local: true) do |form| %>
+<%= form_with(model: [@tabulator, service], local: true) do |form| %>
   <% if service.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(service.errors.count, "error") %> prohibited this service from being saved:</h2>
@@ -11,32 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :organ_id %>
-    <%= form.text_field :organ_id %>
+  <div class="row justify-content-center">
+      <div class="col-sm-7">
+        <div class="card">
+          <div class="card-body">
+
+            <div class="form-group row justify-content-center">
+              <%= form.label "Órgano", :class=> 'col-sm-3 col-form-label' %>
+              <div class="col-sm-8">
+                 <%= form.collection_select :organ_id, @organs, :id, :name, {},  {:class => 'form-control'} %>
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+              <%= form.label "Clasificación", :class=> 'col-sm-3 col-form-label' %>
+              <div class="col-sm-8">
+                <%= form.collection_select :classification_id, @classificationes, :id, :name, {},  {:class => 'form-control'} %>
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+              <%= form.label "Servicio", :class=> 'col-sm-3 col-form-label' %>
+              <div class="col-sm-8">
+                <%= form.collection_select :type_service_id, @type_services, :id, :name, {},  {:class => 'form-control'} %>
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+              <%= form.label "Catidad", :class=> 'col-sm-3 col-form-label' %>
+              <div class="col-sm-8">
+                <%= form.text_field :amount, :class => 'form-control' %>
+              </div>
+            </div>
+      
+            <%= form.hidden_field :tabulator_id, :value => @tabulator.id %>
+      
+            <div class="text-right">
+              <%= form.submit "Agregar nuevo servicio", :class => 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
-  <div class="field">
-    <%= form.label :classification_id %>
-    <%= form.text_field :classification_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :type_service_id %>
-    <%= form.text_field :type_service_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tabulator_id %>
-    <%= form.text_field :tabulator_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  <% end %>
+  
