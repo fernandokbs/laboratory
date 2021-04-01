@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :services
+  resources :type_services
   resources :classifications
   resources :organs
   resources :method_types

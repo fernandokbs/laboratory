@@ -45,13 +45,13 @@ if Classification.count == 0
     Classification.create(:name => "InmunoHistoquimica")
 end
 
-if Service.count == 0
-    Service.create(:name => 'Resección')
-    Service.create(:name => 'Apendicectomía')
-    Service.create(:name => 'Biopsia')
-    Service.create(:name => 'Tumorectomía')
-    Service.create(:name => 'Biopsia (menor de 4cm.)')
-    Service.create(:name => 'Apendicectomía')
+if TypeService.count == 0
+    TypeService.create(:name => 'Resección')
+    TypeService.create(:name => 'Apendicectomía')
+    TypeService.create(:name => 'Biopsia')
+    TypeService.create(:name => 'Tumorectomía')
+    TypeService.create(:name => 'Biopsia (menor de 4cm.)')
+    TypeService.create(:name => 'Apendicectomía')
 end
 
 if SaleType.count == 0
