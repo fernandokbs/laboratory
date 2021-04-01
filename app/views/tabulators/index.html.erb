@@ -13,9 +13,9 @@
       <% @tabulators.each do |tabulator| %>
         <tr>
           <td><%= tabulator.name %></td>
-          <td><%= link_to 'Mostar', tabulator, :class => 'btn' %></td>
-          <td><%= link_to 'Editar', edit_tabulator_path(tabulator), :class => 'btn' %></td>
-          <td><%= link_to 'Eliminar', tabulator, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn' %></td>
+          <td><%= link_to 'Mostar', tabulator, :class => 'btn btn-primary' %></td>
+          <td><%= link_to 'Editar', edit_tabulator_path(tabulator), :class => 'btn btn-secondary' %></td>
+          <td><%= link_to 'Eliminar', tabulator, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
         </tr>
       <% end %>
     </tbody>
