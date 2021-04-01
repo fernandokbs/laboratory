@@ -15,6 +15,10 @@ if Role.count == 0
     Role.create(:name => "Control de Caja")
 end
 
+# if Office.count == 0
+#     Office.create(:name => "Tuxtla Gutierrez", :direction => "Calle central", :phone => 552323423, :manager => "DRA. DIOCELINA VIRUETTE PONTIGO", :position => "ANATOMOPATOLOGA-CITOPATOLOGA")
+# end
+
 if PcrType.count == 0
     PcrType.create(:name => "HPV59 (alto riesgo).")
     PcrType.create(:name => "HPV54 (bajo riesgo).")
@@ -23,29 +27,25 @@ if PcrType.count == 0
     PcrType.create(:name => "HPV56 (alto riesgo).")
 end
 
-if Servicetype.count == 0
-    Servicetype.create(:name => "Patologia")
-    Servicetype.create(:name => "Citologia")
-    Servicetype.create(:name => "Citologia")
-    Servicetype.create(:name => "PCR")
-    Servicetype.create(:name => "InmunoHistoquimica")
+if Classification.count == 0
+    Classification.create(:name => "Patologia")
+    Classification.create(:name => "Citologia")
+    Classification.create(:name => "Estudios Especiales")
+    Classification.create(:name => "PCR")
+    Classification.create(:name => "InmunoHistoquimica")
 end
 
-if SampleType.count == 0
-    SampleType.create(:name => "Muestra de Organos")
-    SampleType.create(:name => "Citologia Ginecologica")
-    SampleType.create(:name => "PCR")
-    SampleType.create(:name => "Inmuno")
-    SampleType.create(:name => "Base Liquida")
-    SampleType.create(:name => "Citologia No Ginecologica")
+if Service.count == 0
+    Service.create(:name => 'Resección')
+    Service.create(:name => 'Apendicectomía')
+    Service.create(:name => 'Biopsia')
+    Service.create(:name => 'Tumorectomía')
+    Service.create(:name => 'Biopsia (menor de 4cm.)')
+    Service.create(:name => 'Apendicectomía')
 end
 
 if SaleType.count == 0
     SaleType.create(:name => "EFECTIVO")
     SaleType.create(:name => "CHEQUE")
     SaleType.create(:name => "ELECTRONICO")
-end
-
-if MethodType.count == 0
-    
 end
