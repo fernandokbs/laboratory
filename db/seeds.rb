@@ -19,6 +19,16 @@ end
 #     Office.create(:name => "Tuxtla Gutierrez", :direction => "Calle central", :phone => 552323423, :manager => "DRA. DIOCELINA VIRUETTE PONTIGO", :position => "ANATOMOPATOLOGA-CITOPATOLOGA")
 # end
 
+if Organ.count == 0
+    Organ.create(:name => 'Amígdalas')
+    Organ.create(:name => 'Apéndice')
+    Organ.create(:name => 'Cartílago, hueso ')
+    Organ.create(:name => 'Cervix')
+    Organ.create(:name => 'Endometrio')
+    Organ.create(:name => 'Epiplón')
+    Organ.create(:name => 'Hernioplastia')
+end
+
 if PcrType.count == 0
     PcrType.create(:name => "HPV59 (alto riesgo).")
     PcrType.create(:name => "HPV54 (bajo riesgo).")
